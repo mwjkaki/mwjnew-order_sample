@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Phone } from "./phone";
+import { Phone } from "./phoneutil/phone";
 
 @Component({
   selector: "my-app",
