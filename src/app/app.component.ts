@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Phone } from "./phoneutil/phone";
+import { Logger } from "./logger.service";
 
 @Component({
   selector: "my-app",
@@ -28,7 +29,12 @@ export class AppComponent {
     { "name": "Xperia X Performance", "vendor": "ソニー", "delivery": "2016年6月" },
     { "name": "arrows M03", "vendor": "富士通", "delivery": "2016年7月" }
   ];
-
+  /**
+  * コンストラクター ...（1）
+  * 依存性注入でloggerオブジェクトを受け取る
+  */  
+  constructor(private logger: Logger) {
+  }
   // 選択されたPhoneオブジェクト
   selectedPhone: Phone;
 
@@ -36,6 +42,8 @@ export class AppComponent {
    * 選択肢クリック時のイベントハンドラ
    */
   onClick(phone: Phone) {
+    // Loggerサービスで、選択されたスマートフォン名をログ出力 ...（2）
+    this.logger.d("App", phone.name);
     this.selectedPhone = phone;
   }
 

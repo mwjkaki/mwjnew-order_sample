@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 //import { PhoneDetailComponent } from "./phonedetail.component";
 //import { PhoneInputComponent }  from "./phoneinput.component";
 import { PhoneUtilModule } from "./phoneutil/phoneutil.module";
+import { Logger }          from "./logger.service";
+
 
 import { OrdHeadComponent } from './ordhead.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,6 +60,7 @@ import {
     PhoneUtilModule
    ],
   declarations: [ AppComponent, OrdHeadComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers:    [ Logger ] // Loggerクラスをサービスとして登録 ...（2）
 })
 export class AppModule { }
