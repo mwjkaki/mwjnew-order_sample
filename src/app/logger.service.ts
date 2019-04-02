@@ -7,6 +7,6 @@ export class Logger {
 
   // デバッグログ出力（Android風）...（3）
   d(tag: any, msg: any) {
-    console.debug("【" + tag + "】: " + msg);
+    console.log("【" + tag + "】: " + msg);
   }
 }
