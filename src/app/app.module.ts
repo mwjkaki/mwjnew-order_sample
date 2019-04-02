@@ -54,9 +54,10 @@ import {
     MatRadioModule,
     MatCardModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    PhoneUtilModule
    ],
-  declarations: [ AppComponent, OrdHeadComponent ,PhoneUtilModule ],
+  declarations: [ AppComponent, OrdHeadComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
